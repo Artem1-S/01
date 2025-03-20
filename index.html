@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .page { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+    <h1>Портфоліо</h1>
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="showPage('page1')">Сторінка1</a></li>
+            <li><a href="javascript:void(0);" onclick="showPage('page2')">Сторінка2</a></li>
+            <li><a href="javascript:void(0);" onclick="showPage('page3')">Сторінка3</a></li>
+        </ul>
+    </nav>
+    <div id="page1" class="page active"><h2>Сторінка1</h2><p>Захоплення, або хобі, гобі — узагальнена назва улюблених занять або розваг, що не є робочою спеціальністю і до яких вдаються у вільний час.</p>
+	<p><img src=Hobby.jpg></p></div>
+    <div id="page2" class="page"><h2>Сторінка2</h2><p>Хобі також може бути чудовим способом провести час із родиною чи друзями. Спільне заняття, таке як походи, готування їжі чи настільні ігри, не лише приносить радість, а й зміцнює взаємозв'язки між людьми. У такі моменти ми можемо відчути підтримку та вдячність за близьких, що важливо для загального благополуччя.</p></div>
+    <div id="page3" class="page"><h2>Сторінка3</h2><p>Важливо також зазначити, що хобі можуть розвивати креативність і давати нові можливості для самовираження. Наприклад, фотографія чи писання блогів дозволяють людям поділитися своїми думками та баченням світу з іншими, знаходячи при цьому підтримку і натхнення в своїй діяльності. Більше того, часто хобі можуть стати не лише відпочинком, але й джерелом натхнення для майбутніх професійних досягнень.</p></div>
+    
+    <script>
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
+```
